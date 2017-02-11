@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/meidan-zemer/LetMeKnow-Lambda/issues"
   },
-  "homepage": "https://github.com/meidan-zemer/LetMeKnow-Lambda#readme"
+  "homepage": "https://github.com/meidan-zemer/LetMeKnow-Lambda#readme",
+  "dependencies": {
+    "uuid": "^3.0.1"
+  }
 }
