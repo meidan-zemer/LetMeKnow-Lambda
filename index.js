@@ -1,5 +1,7 @@
 'use strict';
 const doc = require('dynamodb-doc');
+const uuid = require('uuid/v4');
+
 const dynamo = new doc.DynamoDB();
 
 exports.handler = (event, context, callback) => {
@@ -27,7 +29,7 @@ function addNewContactPoint(event,callback){
         TableName: "user-contact-points-"+stage,
         Item:{
             "user-id":userId,
-            "contact-point-id":(new Date()).getTime().toString(),
+            "contact-point-id":uuid(),
             "contact-point-name":obj["contact-point-name"]
         }
     };
