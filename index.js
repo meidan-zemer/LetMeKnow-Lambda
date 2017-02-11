@@ -28,7 +28,7 @@ function addNewContactPoint(event,callback){
         Item:{
             "user-id":userId,
             "contact-point-id":(new Date()).getTime().toString(),
-            "name":obj.name
+            "contact-point-name":obj["contact-point-name"]
         }
     };
    dynamo.putItem(params,function(err,data){
